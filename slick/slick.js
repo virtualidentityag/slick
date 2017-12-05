@@ -27,13 +27,13 @@
 
 }(function($) {
     'use strict';
-    var Slick = window.Slick || {};
+    var SlickViCustom = window.SlickViCustom || {};
 
-    Slick = (function() {
+    SlickViCustom = (function() {
 
         var instanceUid = 0;
 
-        function Slick(element, settings) {
+        function SlickViCustom(element, settings) {
 
             var _ = this, dataSettings;
 
@@ -184,11 +184,11 @@
 
         }
 
-        return Slick;
+        return SlickViCustom;
 
     }());
 
-    Slick.prototype.activateADA = function() {
+    SlickViCustom.prototype.activateADA = function() {
         var _ = this;
 
         _.$slideTrack.find('.slick-active').attr({
@@ -199,7 +199,7 @@
 
     };
 
-    Slick.prototype.addSlide = Slick.prototype.slickAdd = function(markup, index, addBefore) {
+    SlickViCustom.prototype.addSlide = SlickViCustom.prototype.slickAdd = function(markup, index, addBefore) {
 
         var _ = this;
 
@@ -244,7 +244,7 @@
 
     };
 
-    Slick.prototype.animateHeight = function() {
+    SlickViCustom.prototype.animateHeight = function() {
         var _ = this;
         if (_.options.slidesToShow === 1 && _.options.adaptiveHeight === true && _.options.vertical === false) {
             var targetHeight = _.$slides.eq(_.currentSlide).outerHeight(true);
@@ -254,7 +254,7 @@
         }
     };
 
-    Slick.prototype.animateSlide = function(targetLeft, callback) {
+    SlickViCustom.prototype.animateSlide = function(targetLeft, callback) {
 
         var animProps = {},
             _ = this;
@@ -334,7 +334,7 @@
 
     };
 
-    Slick.prototype.getNavTarget = function() {
+    SlickViCustom.prototype.getNavTarget = function() {
 
         var _ = this,
             asNavFor = _.options.asNavFor;
@@ -347,7 +347,7 @@
 
     };
 
-    Slick.prototype.asNavFor = function(index) {
+    SlickViCustom.prototype.asNavFor = function(index) {
 
         var _ = this,
             asNavFor = _.getNavTarget();
@@ -363,7 +363,7 @@
 
     };
 
-    Slick.prototype.applyTransition = function(slide) {
+    SlickViCustom.prototype.applyTransition = function(slide) {
 
         var _ = this,
             transition = {};
@@ -382,7 +382,7 @@
 
     };
 
-    Slick.prototype.autoPlay = function() {
+    SlickViCustom.prototype.autoPlay = function() {
 
         var _ = this;
 
@@ -394,7 +394,7 @@
 
     };
 
-    Slick.prototype.autoPlayClear = function() {
+    SlickViCustom.prototype.autoPlayClear = function() {
 
         var _ = this;
 
@@ -404,7 +404,7 @@
 
     };
 
-    Slick.prototype.autoPlayIterator = function() {
+    SlickViCustom.prototype.autoPlayIterator = function() {
 
         var _ = this,
             slideTo = _.currentSlide + _.options.slidesToScroll;
@@ -435,7 +435,7 @@
 
     };
 
-    Slick.prototype.buildArrows = function() {
+    SlickViCustom.prototype.buildArrows = function() {
 
         var _ = this;
 
@@ -479,7 +479,7 @@
 
     };
 
-    Slick.prototype.buildDots = function() {
+    SlickViCustom.prototype.buildDots = function() {
 
         var _ = this,
             i, dot;
@@ -502,7 +502,7 @@
 
     };
 
-    Slick.prototype.buildOut = function() {
+    SlickViCustom.prototype.buildOut = function() {
 
         var _ = this;
 
@@ -552,7 +552,7 @@
 
     };
 
-    Slick.prototype.buildRows = function() {
+    SlickViCustom.prototype.buildRows = function() {
 
         var _ = this, a, b, c, newSlides, numOfSlides, originalSlides,slidesPerSection;
 
@@ -592,7 +592,7 @@
 
     };
 
-    Slick.prototype.checkResponsive = function(initial, forceUpdate) {
+    SlickViCustom.prototype.checkResponsive = function(initial, forceUpdate) {
 
         var _ = this,
             breakpoint, targetBreakpoint, respondToWidth, triggerBreakpoint = false;
@@ -680,7 +680,7 @@
 
     };
 
-    Slick.prototype.changeSlide = function(event, dontAnimate) {
+    SlickViCustom.prototype.changeSlide = function(event, dontAnimate) {
 
         var _ = this,
             $target = $(event.currentTarget),
@@ -729,7 +729,7 @@
 
     };
 
-    Slick.prototype.checkNavigable = function(index) {
+    SlickViCustom.prototype.checkNavigable = function(index) {
 
         var _ = this,
             navigables, prevNavigable;
@@ -751,7 +751,7 @@
         return index;
     };
 
-    Slick.prototype.cleanUpEvents = function() {
+    SlickViCustom.prototype.cleanUpEvents = function() {
 
         var _ = this;
 
@@ -808,7 +808,7 @@
 
     };
 
-    Slick.prototype.cleanUpSlideEvents = function() {
+    SlickViCustom.prototype.cleanUpSlideEvents = function() {
 
         var _ = this;
 
@@ -817,7 +817,7 @@
 
     };
 
-    Slick.prototype.cleanUpRows = function() {
+    SlickViCustom.prototype.cleanUpRows = function() {
 
         var _ = this, originalSlides;
 
@@ -829,7 +829,7 @@
 
     };
 
-    Slick.prototype.clickHandler = function(event) {
+    SlickViCustom.prototype.clickHandler = function(event) {
 
         var _ = this;
 
@@ -841,7 +841,7 @@
 
     };
 
-    Slick.prototype.destroy = function(refresh) {
+    SlickViCustom.prototype.destroy = function(refresh) {
 
         var _ = this;
 
@@ -915,7 +915,7 @@
 
     };
 
-    Slick.prototype.disableTransition = function(slide) {
+    SlickViCustom.prototype.disableTransition = function(slide) {
 
         var _ = this,
             transition = {};
@@ -930,7 +930,7 @@
 
     };
 
-    Slick.prototype.fadeSlide = function(slideIndex, callback) {
+    SlickViCustom.prototype.fadeSlide = function(slideIndex, callback) {
 
         var _ = this;
 
@@ -966,7 +966,7 @@
 
     };
 
-    Slick.prototype.fadeSlideOut = function(slideIndex) {
+    SlickViCustom.prototype.fadeSlideOut = function(slideIndex) {
 
         var _ = this;
 
@@ -990,7 +990,7 @@
 
     };
 
-    Slick.prototype.filterSlides = Slick.prototype.slickFilter = function(filter) {
+    SlickViCustom.prototype.filterSlides = SlickViCustom.prototype.slickFilter = function(filter) {
 
         var _ = this;
 
@@ -1010,7 +1010,7 @@
 
     };
 
-    Slick.prototype.focusHandler = function() {
+    SlickViCustom.prototype.focusHandler = function() {
 
         var _ = this;
 
@@ -1033,14 +1033,14 @@
         });
     };
 
-    Slick.prototype.getCurrent = Slick.prototype.slickCurrentSlide = function() {
+    SlickViCustom.prototype.getCurrent = SlickViCustom.prototype.slickCurrentSlide = function() {
 
         var _ = this;
         return _.currentSlide;
 
     };
 
-    Slick.prototype.getDotCount = function() {
+    SlickViCustom.prototype.getDotCount = function() {
 
         var _ = this;
 
@@ -1074,7 +1074,7 @@
 
     };
 
-    Slick.prototype.getLeft = function(slideIndex) {
+    SlickViCustom.prototype.getLeft = function(slideIndex) {
 
         var _ = this,
             targetLeft,
@@ -1181,7 +1181,7 @@
 
     };
 
-    Slick.prototype.getOption = Slick.prototype.slickGetOption = function(option) {
+    SlickViCustom.prototype.getOption = SlickViCustom.prototype.slickGetOption = function(option) {
 
         var _ = this;
 
@@ -1189,7 +1189,7 @@
 
     };
 
-    Slick.prototype.getNavigableIndexes = function() {
+    SlickViCustom.prototype.getNavigableIndexes = function() {
 
         var _ = this,
             breakPoint = 0,
@@ -1215,13 +1215,13 @@
 
     };
 
-    Slick.prototype.getSlick = function() {
+    SlickViCustom.prototype.getSlick = function() {
 
         return this;
 
     };
 
-    Slick.prototype.getSlideCount = function() {
+    SlickViCustom.prototype.getSlideCount = function() {
 
         var _ = this,
             slidesTraversed, swipedSlide, centerOffset;
@@ -1246,7 +1246,7 @@
 
     };
 
-    Slick.prototype.goTo = Slick.prototype.slickGoTo = function(slide, dontAnimate) {
+    SlickViCustom.prototype.goTo = SlickViCustom.prototype.slickGoTo = function(slide, dontAnimate) {
 
         var _ = this;
 
@@ -1259,7 +1259,7 @@
 
     };
 
-    Slick.prototype.init = function(creation) {
+    SlickViCustom.prototype.init = function(creation) {
 
         var _ = this;
 
@@ -1297,7 +1297,7 @@
 
     };
 
-    Slick.prototype.initADA = function() {
+    SlickViCustom.prototype.initADA = function() {
         var _ = this,
                 numDotGroups = Math.ceil(_.slideCount / _.options.slidesToShow),
                 tabControlIndexes = _.getNavigableIndexes().filter(function(val) {
@@ -1365,7 +1365,7 @@
 
     };
 
-    Slick.prototype.initArrowEvents = function() {
+    SlickViCustom.prototype.initArrowEvents = function() {
 
         var _ = this;
 
@@ -1389,7 +1389,7 @@
 
     };
 
-    Slick.prototype.initDotEvents = function() {
+    SlickViCustom.prototype.initDotEvents = function() {
 
         var _ = this;
 
@@ -1413,7 +1413,7 @@
 
     };
 
-    Slick.prototype.initSlideEvents = function() {
+    SlickViCustom.prototype.initSlideEvents = function() {
 
         var _ = this;
 
@@ -1426,7 +1426,7 @@
 
     };
 
-    Slick.prototype.initializeEvents = function() {
+    SlickViCustom.prototype.initializeEvents = function() {
 
         var _ = this;
 
@@ -1471,7 +1471,7 @@
 
     };
 
-    Slick.prototype.initUI = function() {
+    SlickViCustom.prototype.initUI = function() {
 
         var _ = this;
 
@@ -1490,7 +1490,7 @@
 
     };
 
-    Slick.prototype.keyHandler = function(event) {
+    SlickViCustom.prototype.keyHandler = function(event) {
 
         var _ = this;
          //Dont slide if the cursor is inside the form fields and arrow keys are pressed
@@ -1512,7 +1512,7 @@
 
     };
 
-    Slick.prototype.lazyLoad = function() {
+    SlickViCustom.prototype.lazyLoad = function() {
 
         var _ = this,
             loadRange, cloneRange, rangeStart, rangeEnd;
@@ -1620,7 +1620,7 @@
 
     };
 
-    Slick.prototype.loadSlider = function() {
+    SlickViCustom.prototype.loadSlider = function() {
 
         var _ = this;
 
@@ -1640,7 +1640,7 @@
 
     };
 
-    Slick.prototype.next = Slick.prototype.slickNext = function() {
+    SlickViCustom.prototype.next = SlickViCustom.prototype.slickNext = function() {
 
         var _ = this;
 
@@ -1652,7 +1652,7 @@
 
     };
 
-    Slick.prototype.orientationChange = function() {
+    SlickViCustom.prototype.orientationChange = function() {
 
         var _ = this;
 
@@ -1661,7 +1661,7 @@
 
     };
 
-    Slick.prototype.pause = Slick.prototype.slickPause = function() {
+    SlickViCustom.prototype.pause = SlickViCustom.prototype.slickPause = function() {
 
         var _ = this;
 
@@ -1670,7 +1670,7 @@
 
     };
 
-    Slick.prototype.play = Slick.prototype.slickPlay = function() {
+    SlickViCustom.prototype.play = SlickViCustom.prototype.slickPlay = function() {
 
         var _ = this;
 
@@ -1682,7 +1682,7 @@
 
     };
 
-    Slick.prototype.postSlide = function(index) {
+    SlickViCustom.prototype.postSlide = function(index) {
 
         var _ = this;
 
@@ -1715,7 +1715,7 @@
 
     };
 
-    Slick.prototype.prev = Slick.prototype.slickPrev = function() {
+    SlickViCustom.prototype.prev = SlickViCustom.prototype.slickPrev = function() {
 
         var _ = this;
 
@@ -1727,13 +1727,13 @@
 
     };
 
-    Slick.prototype.preventDefault = function(event) {
+    SlickViCustom.prototype.preventDefault = function(event) {
 
         event.preventDefault();
 
     };
 
-    Slick.prototype.progressiveLazyLoad = function( tryCount ) {
+    SlickViCustom.prototype.progressiveLazyLoad = function( tryCount ) {
 
         tryCount = tryCount || 1;
 
@@ -1817,7 +1817,7 @@
 
     };
 
-    Slick.prototype.refresh = function( initializing ) {
+    SlickViCustom.prototype.refresh = function( initializing ) {
 
         var _ = this, currentSlide, lastVisibleIndex;
 
@@ -1856,7 +1856,7 @@
 
     };
 
-    Slick.prototype.registerBreakpoints = function() {
+    SlickViCustom.prototype.registerBreakpoints = function() {
 
         var _ = this, breakpoint, currentBreakpoint, l,
             responsiveSettings = _.options.responsive || null;
@@ -1896,7 +1896,7 @@
 
     };
 
-    Slick.prototype.reinit = function() {
+    SlickViCustom.prototype.reinit = function() {
 
         var _ = this;
 
@@ -1946,7 +1946,7 @@
 
     };
 
-    Slick.prototype.resize = function() {
+    SlickViCustom.prototype.resize = function() {
 
         var _ = this;
 
@@ -1960,7 +1960,7 @@
         }
     };
 
-    Slick.prototype.removeSlide = Slick.prototype.slickRemove = function(index, removeBefore, removeAll) {
+    SlickViCustom.prototype.removeSlide = SlickViCustom.prototype.slickRemove = function(index, removeBefore, removeAll) {
 
         var _ = this;
 
@@ -1995,7 +1995,7 @@
 
     };
 
-    Slick.prototype.setCSS = function(position) {
+    SlickViCustom.prototype.setCSS = function(position) {
 
         var _ = this,
             positionProps = {},
@@ -2024,7 +2024,7 @@
 
     };
 
-    Slick.prototype.setDimensions = function() {
+    SlickViCustom.prototype.setDimensions = function() {
 
         var _ = this;
 
@@ -2063,7 +2063,7 @@
 
     };
 
-    Slick.prototype.setFade = function() {
+    SlickViCustom.prototype.setFade = function() {
 
         var _ = this,
             targetLeft;
@@ -2096,7 +2096,7 @@
 
     };
 
-    Slick.prototype.setHeight = function() {
+    SlickViCustom.prototype.setHeight = function() {
 
         var _ = this;
 
@@ -2107,8 +2107,8 @@
 
     };
 
-    Slick.prototype.setOption =
-    Slick.prototype.slickSetOption = function() {
+    SlickViCustom.prototype.setOption =
+    SlickViCustom.prototype.slickSetOption = function() {
 
         /**
          * accepts arguments in format of:
@@ -2205,7 +2205,7 @@
 
     };
 
-    Slick.prototype.setPosition = function() {
+    SlickViCustom.prototype.setPosition = function() {
 
         var _ = this;
 
@@ -2223,7 +2223,7 @@
 
     };
 
-    Slick.prototype.setProps = function() {
+    SlickViCustom.prototype.setProps = function() {
 
         var _ = this,
             bodyStyle = document.body.style;
@@ -2287,7 +2287,7 @@
     };
 
 
-    Slick.prototype.setSlideClasses = function(index) {
+    SlickViCustom.prototype.setSlideClasses = function(index) {
 
         var _ = this,
             centerOffset, allSlides, indexOffset, remainder;
@@ -2390,7 +2390,7 @@
         }
     };
 
-    Slick.prototype.setupInfinite = function() {
+    SlickViCustom.prototype.setupInfinite = function() {
 
         var _ = this,
             i, slideIndex, infiniteCount;
@@ -2434,7 +2434,7 @@
 
     };
 
-    Slick.prototype.interrupt = function( toggle ) {
+    SlickViCustom.prototype.interrupt = function( toggle ) {
 
         var _ = this;
 
@@ -2445,7 +2445,7 @@
 
     };
 
-    Slick.prototype.selectHandler = function(event) {
+    SlickViCustom.prototype.selectHandler = function(event) {
 
         var _ = this;
 
@@ -2469,7 +2469,7 @@
 
     };
 
-    Slick.prototype.slideHandler = function(index, sync, dontAnimate) {
+    SlickViCustom.prototype.slideHandler = function(index, sync, dontAnimate) {
 
         var targetSlide, animSlide, oldSlide, slideLeft, targetLeft = null,
             _ = this, navTarget;
@@ -2589,7 +2589,7 @@
 
     };
 
-    Slick.prototype.startLoad = function() {
+    SlickViCustom.prototype.startLoad = function() {
 
         var _ = this;
 
@@ -2610,7 +2610,7 @@
 
     };
 
-    Slick.prototype.swipeDirection = function() {
+    SlickViCustom.prototype.swipeDirection = function() {
 
         var xDist, yDist, r, swipeAngle, _ = this;
 
@@ -2644,7 +2644,7 @@
 
     };
 
-    Slick.prototype.swipeEnd = function(event) {
+    SlickViCustom.prototype.swipeEnd = function(event) {
 
         var _ = this,
             slideCount,
@@ -2725,7 +2725,7 @@
 
     };
 
-    Slick.prototype.swipeHandler = function(event) {
+    SlickViCustom.prototype.swipeHandler = function(event) {
 
         var _ = this;
 
@@ -2764,7 +2764,7 @@
 
     };
 
-    Slick.prototype.swipeMove = function(event) {
+    SlickViCustom.prototype.swipeMove = function(event) {
 
         var _ = this,
             edgeWasHit = false,
@@ -2842,7 +2842,7 @@
 
     };
 
-    Slick.prototype.swipeStart = function(event) {
+    SlickViCustom.prototype.swipeStart = function(event) {
 
         var _ = this,
             touches;
@@ -2865,7 +2865,7 @@
 
     };
 
-    Slick.prototype.unfilterSlides = Slick.prototype.slickUnfilter = function() {
+    SlickViCustom.prototype.unfilterSlides = SlickViCustom.prototype.slickUnfilter = function() {
 
         var _ = this;
 
@@ -2883,7 +2883,7 @@
 
     };
 
-    Slick.prototype.unload = function() {
+    SlickViCustom.prototype.unload = function() {
 
         var _ = this;
 
@@ -2908,7 +2908,7 @@
 
     };
 
-    Slick.prototype.unslick = function(fromBreakpoint) {
+    SlickViCustom.prototype.unslick = function(fromBreakpoint) {
 
         var _ = this;
         _.$slider.trigger('unslick', [_, fromBreakpoint]);
@@ -2916,7 +2916,7 @@
 
     };
 
-    Slick.prototype.updateArrows = function() {
+    SlickViCustom.prototype.updateArrows = function() {
 
         var _ = this,
             centerOffset;
@@ -2951,7 +2951,7 @@
 
     };
 
-    Slick.prototype.updateDots = function() {
+    SlickViCustom.prototype.updateDots = function() {
 
         var _ = this;
 
@@ -2971,7 +2971,7 @@
 
     };
 
-    Slick.prototype.visibility = function() {
+    SlickViCustom.prototype.visibility = function() {
 
         var _ = this;
 
@@ -2991,7 +2991,7 @@
 
     };
 
-    $.fn.slick = function() {
+    $.fn.slickViCustom = function() {
         var _ = this,
             opt = arguments[0],
             args = Array.prototype.slice.call(arguments, 1),
@@ -3000,7 +3000,7 @@
             ret;
         for (i = 0; i < l; i++) {
             if (typeof opt == 'object' || typeof opt == 'undefined')
-                _[i].slick = new Slick(_[i], opt);
+                _[i].slick = new SlickViCustom(_[i], opt);
             else
                 ret = _[i].slick[opt].apply(_[i].slick, args);
             if (typeof ret != 'undefined') return ret;
